@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/EnumsLanguage/EnumsLanguage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/EnumsLanguage/sandbox/EnumsLanguage.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/EnumsToJavaLanguage/EnumsToJavaLanguage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/JavaSolution/JavaSolution.msd" folder="" />
+    </projectModules>
+  </component>
+</project>

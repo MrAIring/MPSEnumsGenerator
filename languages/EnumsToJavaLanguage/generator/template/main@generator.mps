@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:bef3adee-3178-4a5c-b42f-e68a403cbd44(EnumsToJavaLanguage.generator.template.main@generator)">
+<model ref="r:bef3adee-3178-4a5c-b42f-e68a403cbd44(EnumsGenerationLanguage.generator.template.main@generator)">
   <persistence version="9" />
   <languages>
-    <use id="7a7b03d0-35af-4789-8924-966409e735de" name="EnumsToJavaLanguage" version="-1" />
+    <use id="7a7b03d0-35af-4789-8924-966409e735de" name="EnumsGenerationLanguage" version="-1" />
     <use id="990507d3-3527-4c54-bfe9-0ca3c9c6247a" name="com.dslfoundry.plaintextgen" version="0" />
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
   </languages>
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <import index="nxii" ref="r:49b2d325-e192-4aee-ac80-d0dbdd19637a(EnumsLanguage.structure)" />
-    <import index="wegd" ref="r:97270420-67ce-4117-9f67-e6bde8fa9fa7(EnumsToJavaLanguage.structure)" />
+    <import index="wegd" ref="r:97270420-67ce-4117-9f67-e6bde8fa9fa7(EnumsGenerationLanguage.structure)" />
   </imports>
   <registry>
     <language id="13744753-c81f-424a-9c1b-cf8943bf4e86" name="jetbrains.mps.lang.sharedConcepts">
@@ -170,6 +170,7 @@
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
         <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
       </concept>
       <concept id="3364660638048049750" name="jetbrains.mps.lang.core.structure.PropertyAttribute" flags="ng" index="A9Btg">
@@ -192,7 +193,7 @@
   <node concept="bUwia" id="J9L2XBzeaM">
     <property role="TrG5h" value="main" />
     <node concept="3lhOvk" id="J9L2XB_xue" role="3lj3bC">
-      <ref role="30HIoZ" to="wegd:2_vnwXDMsdr" resolve="EnumWithPackageName" />
+      <ref role="30HIoZ" to="wegd:2_vnwXDMsdr" resolve="JavaRoot" />
       <ref role="3lhOvi" node="2_vnwXDMuVg" resolve="JavaEnumClass" />
     </node>
     <node concept="1puMqW" id="J9L2XBG0zk" role="1puA0r">
@@ -202,8 +203,9 @@
   <node concept="356sEV" id="2_vnwXDMuVg">
     <property role="TrG5h" value="JavaEnumClass" />
     <property role="3Le9LX" value=".java" />
+    <property role="3GE5qa" value="generation" />
     <node concept="n94m4" id="2_vnwXDMuVi" role="lGtFl">
-      <ref role="n9lRv" to="wegd:2_vnwXDMsdr" resolve="EnumWithPackageName" />
+      <ref role="n9lRv" to="wegd:2_vnwXDMsdr" resolve="JavaRoot" />
     </node>
     <node concept="17Uvod" id="2_vnwXDMuVs" role="lGtFl">
       <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
@@ -1013,7 +1015,7 @@
               <node concept="2OqwBi" id="51eecZAdonx" role="3clFbG">
                 <node concept="30H73N" id="51eecZAdoaP" role="2Oq$k0" />
                 <node concept="3TrcHB" id="J9L2XB_Nef" role="2OqNvi">
-                  <ref role="3TsBF5" to="wegd:2_vnwXDMsds" resolve="packageName" />
+                  <ref role="3TsBF5" to="wegd:2_vnwXDMsds" resolve="package" />
                 </node>
               </node>
             </node>
@@ -1060,7 +1062,7 @@
             <node concept="2OqwBi" id="J9L2XBFC7T" role="2Oq$k0">
               <node concept="1Q6Npb" id="J9L2XBFC1a" role="2Oq$k0" />
               <node concept="2RRcyG" id="J9L2XBFCg6" role="2OqNvi">
-                <ref role="2RRcyH" to="wegd:J9L2XBzepG" resolve="EnumListGenerationOptions" />
+                <ref role="2RRcyH" to="wegd:J9L2XBzepG" resolve="EnumGeneration" />
               </node>
             </node>
             <node concept="2es0OD" id="J9L2XBFGjs" role="2OqNvi">
@@ -1075,7 +1077,7 @@
                           <ref role="3cqZAo" node="J9L2XBFGjw" resolve="it" />
                         </node>
                         <node concept="3TrcHB" id="J9L2XBFJdJ" role="2OqNvi">
-                          <ref role="3TsBF5" to="wegd:J9L2XBzexm" resolve="packageName" />
+                          <ref role="3TsBF5" to="wegd:J9L2XBzexm" resolve="JavaPackageName" />
                         </node>
                       </node>
                     </node>
@@ -1103,12 +1105,12 @@
                               <node concept="3cpWsn" id="J9L2XBFSeY" role="3cpWs9">
                                 <property role="TrG5h" value="root" />
                                 <node concept="3Tqbb2" id="J9L2XBFSeU" role="1tU5fm">
-                                  <ref role="ehGHo" to="wegd:2_vnwXDMsdr" resolve="EnumWithPackageName" />
+                                  <ref role="ehGHo" to="wegd:2_vnwXDMsdr" resolve="JavaRoot" />
                                 </node>
                                 <node concept="2OqwBi" id="J9L2XBFSeZ" role="33vP2m">
                                   <node concept="1Q6Npb" id="J9L2XBFSf0" role="2Oq$k0" />
                                   <node concept="2xF2bX" id="J9L2XBFSf1" role="2OqNvi">
-                                    <ref role="I8UWU" to="wegd:2_vnwXDMsdr" resolve="EnumWithPackageName" />
+                                    <ref role="I8UWU" to="wegd:2_vnwXDMsdr" resolve="JavaRoot" />
                                   </node>
                                 </node>
                               </node>
@@ -1142,7 +1144,7 @@
                                     <ref role="3cqZAo" node="J9L2XBFSeY" resolve="root" />
                                   </node>
                                   <node concept="3TrcHB" id="J9L2XBFYbO" role="2OqNvi">
-                                    <ref role="3TsBF5" to="wegd:2_vnwXDMsds" resolve="packageName" />
+                                    <ref role="3TsBF5" to="wegd:2_vnwXDMsds" resolve="package" />
                                   </node>
                                 </node>
                               </node>

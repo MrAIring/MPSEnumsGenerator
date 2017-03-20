@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:3d7e58ec-32ac-4d29-b588-a920c02c6150(EnumsToJavaLanguage.editor)">
+<model ref="r:3d7e58ec-32ac-4d29-b588-a920c02c6150(EnumsGenerationLanguage.editor)">
   <persistence version="9" />
   <languages>
     <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
     <devkit ref="2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)" />
   </languages>
   <imports>
-    <import index="wegd" ref="r:97270420-67ce-4117-9f67-e6bde8fa9fa7(EnumsToJavaLanguage.structure)" implicit="true" />
+    <import index="wegd" ref="r:97270420-67ce-4117-9f67-e6bde8fa9fa7(EnumsGenerationLanguage.structure)" implicit="true" />
     <import index="o0wm" ref="r:5731250e-a1de-4bc3-bfcd-511dfc373246(EnumsLanguage.editor)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
@@ -81,7 +81,7 @@
     </language>
   </registry>
   <node concept="24kQdi" id="J9L2XBzf0f">
-    <ref role="1XX52x" to="wegd:J9L2XBzexu" resolve="EnumGenerationOption" />
+    <ref role="1XX52x" to="wegd:J9L2XBzexu" resolve="GenerationOptions" />
     <node concept="3EZMnI" id="J9L2XB$Q$o" role="2wV5jI">
       <node concept="3EZMnI" id="J9L2XB$Q$A" role="3EZMnx">
         <node concept="2iRkQZ" id="J9L2XB$Q$B" role="2iSdaV" />
@@ -116,11 +116,11 @@
     </node>
   </node>
   <node concept="24kQdi" id="J9L2XB_5nD">
-    <ref role="1XX52x" to="wegd:J9L2XBzepG" resolve="EnumListGenerationOptions" />
+    <ref role="1XX52x" to="wegd:J9L2XBzepG" resolve="EnumGeneration" />
     <node concept="3EZMnI" id="J9L2XB_5qu" role="2wV5jI">
       <node concept="l2Vlx" id="J9L2XB_5qv" role="2iSdaV" />
       <node concept="3F0ifn" id="J9L2XB_5qw" role="3EZMnx">
-        <property role="3F0ifm" value="Java generation options for" />
+        <property role="3F0ifm" value="Generation options for" />
       </node>
       <node concept="1iCGBv" id="J9L2XB_5qz" role="3EZMnx">
         <ref role="1NtTu8" to="wegd:J9L2XBzepH" resolve="enumList" />
@@ -138,16 +138,58 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3F0ifn" id="J9L2XB_5$c" role="3EZMnx">
-        <property role="3F0ifm" value="package name" />
-        <node concept="lj46D" id="J9L2XB_fJR" role="3F10Kt">
+      <node concept="3EZMnI" id="6$F3$aPKK1p" role="3EZMnx">
+        <node concept="VPM3Z" id="6$F3$aPKK1r" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="ljvvj" id="6$F3$aPKKQu" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
-      </node>
-      <node concept="3F0A7n" id="J9L2XB_5qx" role="3EZMnx">
-        <ref role="1NtTu8" to="wegd:J9L2XBzexm" resolve="packageName" />
-        <node concept="ljvvj" id="J9L2XB_5B7" role="3F10Kt">
-          <property role="VOm3f" value="true" />
+        <node concept="3EZMnI" id="6$F3$aPKKS_" role="3EZMnx">
+          <node concept="2iRkQZ" id="6$F3$aPKKSA" role="2iSdaV" />
+          <node concept="3F0ifn" id="J9L2XB_5$c" role="3EZMnx">
+            <property role="3F0ifm" value="Java package" />
+            <node concept="lj46D" id="J9L2XB_fJR" role="3F10Kt">
+              <property role="VOm3f" value="true" />
+            </node>
+          </node>
+          <node concept="3F0A7n" id="J9L2XB_5qx" role="3EZMnx">
+            <ref role="1NtTu8" to="wegd:J9L2XBzexm" resolve="JavaPackageName" />
+            <node concept="ljvvj" id="J9L2XB_5B7" role="3F10Kt">
+              <property role="VOm3f" value="true" />
+            </node>
+          </node>
+        </node>
+        <node concept="2iRfu4" id="6$F3$aPKK1u" role="2iSdaV" />
+        <node concept="3F0ifn" id="6$F3$aPKW7O" role="3EZMnx">
+          <property role="3F0ifm" value="    " />
+        </node>
+        <node concept="3EZMnI" id="6$F3$aPKKTX" role="3EZMnx">
+          <node concept="VPM3Z" id="6$F3$aPKKTZ" role="3F10Kt">
+            <property role="VOm3f" value="false" />
+          </node>
+          <node concept="3F0ifn" id="6$F3$aPKKUq" role="3EZMnx">
+            <property role="3F0ifm" value="C++ namespace" />
+          </node>
+          <node concept="3F0A7n" id="6$F3$aPKKVl" role="3EZMnx">
+            <ref role="1NtTu8" to="wegd:6$F3$aPKFTM" resolve="CPlusPlusNamespase" />
+          </node>
+          <node concept="2iRkQZ" id="6$F3$aPKKU2" role="2iSdaV" />
+        </node>
+        <node concept="3F0ifn" id="6$F3$aPKW91" role="3EZMnx">
+          <property role="3F0ifm" value="    " />
+        </node>
+        <node concept="3EZMnI" id="6$F3$aPKKW3" role="3EZMnx">
+          <node concept="VPM3Z" id="6$F3$aPKKW5" role="3F10Kt">
+            <property role="VOm3f" value="false" />
+          </node>
+          <node concept="3F0ifn" id="6$F3$aPKKWE" role="3EZMnx">
+            <property role="3F0ifm" value="C# namespace" />
+          </node>
+          <node concept="3F0A7n" id="6$F3$aPKKWP" role="3EZMnx">
+            <ref role="1NtTu8" to="wegd:6$F3$aPKFTP" resolve="CSharpNamespace" />
+          </node>
+          <node concept="2iRkQZ" id="6$F3$aPKKW8" role="2iSdaV" />
         </node>
       </node>
       <node concept="3F0ifn" id="J9L2XB_lln" role="3EZMnx">

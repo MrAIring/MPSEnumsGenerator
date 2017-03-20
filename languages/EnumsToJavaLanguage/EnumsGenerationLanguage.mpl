@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<language namespace="EnumsToJavaLanguage" uuid="7a7b03d0-35af-4789-8924-966409e735de" languageVersion="0" moduleVersion="0">
+<language namespace="EnumsGenerationLanguage" uuid="7a7b03d0-35af-4789-8924-966409e735de" languageVersion="0" moduleVersion="0">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
@@ -7,7 +7,7 @@
   </models>
   <accessoryModels />
   <generators>
-    <generator generatorUID="EnumsToJavaLanguage#849425712615842481" uuid="569ee963-b851-4ccc-8ef3-5db3fb392bc8">
+    <generator generatorUID="EnumsGenerationLanguage#849425712615842481" uuid="569ee963-b851-4ccc-8ef3-5db3fb392bc8">
       <models>
         <modelRoot contentPath="${module}" type="default">
           <sourceRoot location="generator/template" />
@@ -23,8 +23,8 @@
         <usedDevKit>a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)</usedDevKit>
       </usedDevKits>
       <languageVersions>
-        <language slang="l:e5035ea4-7c39-4674-9e44-6860faebabf4:EnumsLanguage" version="0" />
         <language slang="l:7a7b03d0-35af-4789-8924-966409e735de:EnumsToJavaLanguage" version="-1" />
+        <language slang="l:e5035ea4-7c39-4674-9e44-6860faebabf4:EnumsLanguage" version="0" />
         <language slang="l:990507d3-3527-4c54-bfe9-0ca3c9c6247a:com.dslfoundry.plaintextgen" version="0" />
         <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="4" />
         <language slang="l:ed6d7656-532c-4bc2-81d1-af945aeb8280:jetbrains.mps.baseLanguage.blTypes" version="0" />
@@ -44,9 +44,9 @@
       </languageVersions>
       <dependencyVersions>
         <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
+        <module reference="7a7b03d0-35af-4789-8924-966409e735de(EnumsGenerationLanguage)" version="0" />
+        <module reference="569ee963-b851-4ccc-8ef3-5db3fb392bc8(EnumsGenerationLanguage#849425712615842481)" version="0" />
         <module reference="e5035ea4-7c39-4674-9e44-6860faebabf4(EnumsLanguage)" version="0" />
-        <module reference="7a7b03d0-35af-4789-8924-966409e735de(EnumsToJavaLanguage)" version="0" />
-        <module reference="569ee963-b851-4ccc-8ef3-5db3fb392bc8(EnumsToJavaLanguage#849425712615842481)" version="0" />
         <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
         <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
         <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
@@ -97,8 +97,8 @@
   </languageVersions>
   <dependencyVersions>
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
+    <module reference="7a7b03d0-35af-4789-8924-966409e735de(EnumsGenerationLanguage)" version="0" />
     <module reference="e5035ea4-7c39-4674-9e44-6860faebabf4(EnumsLanguage)" version="0" />
-    <module reference="7a7b03d0-35af-4789-8924-966409e735de(EnumsToJavaLanguage)" version="0" />
     <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
     <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
